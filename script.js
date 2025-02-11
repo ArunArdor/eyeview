@@ -1,11 +1,14 @@
 $(document).ready(function() {
-    // Create seats programmatically
-    const rows = ['firstRow', 'secondRow', 'thirdRow', 'fourthRow'];
-    rows.forEach(row => {
-        for(let i = 0; i < 6; i++) {
-            $(`#${row}`).append(`<div class="seat">Seat ${i+1}</div>`);
-        }
-    });
+    // Clear existing content
+    $("#classroom").empty();
+
+    // Add podium at the top
+    $("#classroom").append(`<div id="podium">🙃🦭</div>`);
+
+    // Create a 4x6 grid of seats
+    for (let i = 0; i < 24; i++) {
+        $("#classroom").append(`<div class="seat">Seat ${i + 1}</div>`);
+    }
 
     // Make seats draggable
     $(".seat").draggable({
@@ -18,14 +21,5 @@ $(document).ready(function() {
     // Podium animation
     $("#podium").click(function() {
         $(this).animate({ left: '250px' }, 500);
-    });
-
-    // Position logging
-    $(document).on('click', event => {
-        const element = $(event.target);
-        if(element.hasClass('seat')) {
-            const pos = element.position();
-            console.log(`Seat Position: Left: ${pos.left}, Top: ${pos.top}`);
-        }
     });
 });
