@@ -4,9 +4,11 @@ $(document).ready(function() {
     // Add podium at the top
     $("#classroom").append(`<div id="podium">🙃🦭</div>`);
 
-    // Create a 4x6 grid of seats
-    for (let i = 0; i < 24; i++) {
-        $("#classroom").append(`<div class="seat">Seat ${i + 1}</div>`);
+    // Create 4 rows of 6 seats each
+    for (let row = 1; row <= 4; row++) {
+        for (let seat = 1; seat <= 6; seat++) {
+            $("#classroom").append(`<div class="seat">Seat ${seat}</div>`);
+        }
     }
 
     // Make seats draggable
