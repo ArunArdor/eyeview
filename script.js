@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    // Clear existing content
     $("#classroom").empty();
 
     // Add podium at the top
