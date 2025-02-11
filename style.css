@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+#classroom {
+    height: 800px;
+    width: 800px;
+    background-color: #CCC;
+    margin: auto;
+    position: relative;
+}
+
+#podium {
+    height: 100px;
+    width: 150px;
+    border: solid 2px black;
+    background-color: #0d6efd;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    transform: rotate(180deg);
+    text-align: center;
+    font-size: 2em;
+}
+
+.desks {
+    height: 100px;
+    width: 600px;
+    position: absolute;
+    left: 125px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#firstRow { top: 200px; }
+#secondRow { top: 300px; }
+#thirdRow { top: 400px; }
+#fourthRow { top: 500px; }
+
+.seat {
+    height: 70px;
+    width: 70px;
+    background-color: purple;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: move;
+}
