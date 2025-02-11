@@ -6,7 +6,7 @@
     position: relative;
     display: grid;
     grid-template-columns: repeat(6, 1fr); /* 6 columns */
-    grid-gap: 10px; /* Space between seats */
+    grid-gap: 10px;  /* Space between seats */
     padding: 20px;
     justify-content: center;
 }
